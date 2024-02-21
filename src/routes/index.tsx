@@ -1,25 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import DoesntWork1 from "./doesnt-work-1";
+import DoesntWork2 from "./doesnt-work-2";
+import Works from "./works";
 
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
+      <div style="padding: 20px; margin: 10px 0; font-weight: bold; font-size: 20px;">
+        Click the buttons below multiple times to increase the page value by 1
+        and to show the loading indicator.
+      </div>
+      <DoesntWork1 />
+      <DoesntWork2 />
+      <Works />
     </>
   );
 });
-
-export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};
